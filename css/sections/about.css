@@ -1,0 +1,158 @@
+/* =========================================================
+   ABSOLUT AURAA — About Section
+   ========================================================= */
+
+.about {
+  background: var(--white);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.about__image-wrap {
+  position: relative;
+}
+
+.about__image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.about__image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.about__image-accent {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1px solid var(--gold-light);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+}
+
+.about__experience {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  background: var(--gold-primary);
+  color: var(--white);
+  padding: var(--space-xl) var(--space-2xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-gold);
+}
+
+.about__experience-number {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+}
+
+.about__experience-label {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  margin-top: var(--space-xs);
+  opacity: 0.9;
+}
+
+.about__content {
+  padding-left: var(--space-xl);
+}
+
+.about__text {
+  margin-bottom: var(--space-xl);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Mission / Vision / Values ── */
+.about__pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.about__pillar {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.about__pillar:hover {
+  background: var(--gold-pale);
+}
+
+.about__pillar-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto var(--space-md);
+  color: var(--gold-primary);
+}
+
+.about__pillar-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.about__pillar-text {
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+  line-height: var(--lh-body);
+}
+
+/* ── Counter Bar ── */
+.about__counters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--beige);
+}
+
+.about__counter {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .about__content {
+    padding-left: 0;
+  }
+
+  .about__image img {
+    height: 400px;
+  }
+
+  .about__pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .about__counters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

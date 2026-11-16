@@ -1,0 +1,207 @@
+/* =========================================================
+   ABSOLUT AURAA — Doctor Section
+   ========================================================= */
+
+.doctor {
+  background: var(--white);
+}
+
+.doctor__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.doctor__image-wrap {
+  position: relative;
+}
+
+.doctor__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+}
+
+.doctor__image img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-xl);
+}
+
+.doctor__image-frame {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  left: 12px;
+  top: 12px;
+  border: 1px solid var(--gold-light);
+  border-radius: var(--radius-xl);
+  z-index: -1;
+}
+
+.doctor__badge {
+  position: absolute;
+  bottom: var(--space-2xl);
+  left: -30px;
+  background: var(--white);
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.doctor__badge-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold-pale);
+  border-radius: var(--radius-full);
+  color: var(--gold-primary);
+}
+
+.doctor__badge-text {
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+}
+
+.doctor__badge-number {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--gold-primary);
+  line-height: 1;
+}
+
+.doctor__content {
+  padding-right: var(--space-xl);
+}
+
+.doctor__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.doctor__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  color: var(--gold-primary);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--space-xl);
+}
+
+.doctor__bio {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-2xl);
+}
+
+.doctor__qualifications {
+  margin-bottom: var(--space-2xl);
+}
+
+.doctor__qual-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.doctor__qual-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.doctor__qual-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+}
+
+.doctor__qual-item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--gold-primary);
+  flex-shrink: 0;
+}
+
+.doctor__quote {
+  position: relative;
+  padding: var(--space-xl);
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--gold-primary);
+  margin-bottom: var(--space-2xl);
+}
+
+.doctor__quote p {
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-lg);
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Second Doctor ── */
+.doctor__team {
+  margin-top: var(--space-4xl);
+  padding-top: var(--space-3xl);
+  border-top: 1px solid var(--beige);
+}
+
+.doctor__team-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.doctor__team-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 1024px) {
+  .doctor__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .doctor__image img {
+    height: 450px;
+  }
+
+  .doctor__content {
+    padding-right: 0;
+  }
+
+  .doctor__badge {
+    left: var(--space-lg);
+  }
+
+  .doctor__qual-list {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor__team-grid {
+    grid-template-columns: 1fr;
+  }
+}

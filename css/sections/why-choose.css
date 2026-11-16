@@ -1,0 +1,99 @@
+/* =========================================================
+   ABSOLUT AURAA — Why Choose Us
+   ========================================================= */
+
+.why-choose {
+  background: var(--cream);
+}
+
+.why-choose__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.why-choose__card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--duration-normal) var(--ease-luxury);
+  border: 1px solid transparent;
+}
+
+.why-choose__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: var(--gold-primary);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  opacity: 0;
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.why-choose__card:hover {
+  border-color: var(--gold-pale);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+
+.why-choose__card:hover::before {
+  opacity: 1;
+  width: 60px;
+}
+
+.why-choose__icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold-pale);
+  border-radius: var(--radius-lg);
+  color: var(--gold-primary);
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.why-choose__card:hover .why-choose__icon {
+  background: var(--gold-primary);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.why-choose__icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.why-choose__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.why-choose__text {
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+@media (max-width: 1024px) {
+  .why-choose__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .why-choose__grid {
+    grid-template-columns: 1fr;
+  }
+}
